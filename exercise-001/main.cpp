@@ -53,10 +53,14 @@ auto main(int argc, char **argv) -> int
     fmt::print("Unsorted Numbers:\n");
     print_vector(randomValues);
 
+    auto start = std::chrono::system_clock::now();
     std::sort(randomValues.begin(), randomValues.end());
+    auto end = std::chrono::system_clock::now();
+    auto elapsed = std::chrono::duration_cast<std::chrono::nanoseconds>(end - start);
 
     fmt::print("Sorted Numbers:\n");
     print_vector(randomValues);
+    fmt::print("time for the sort: {}", elapsed);
 
     return 0; /* exit gracefully*/
 
