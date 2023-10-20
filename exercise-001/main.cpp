@@ -50,9 +50,13 @@ auto main(int argc, char **argv) -> int
     for (int i = 0; i < count; ++i) {
     randomValues.push_back(dis(gen));
     }
+    fmt::print("Unsorted Numbers:\n");
     print_vector(randomValues);
 
+    std::sort(randomValues.begin(), randomValues.end());
 
+    fmt::print("Sorted Numbers:\n");
+    print_vector(randomValues);
 
     return 0; /* exit gracefully*/
 
