@@ -7,6 +7,15 @@
 #include <vector>
 #include <random>
 
+void print_vector(const std::vector<int>& vector) 
+{
+    for (int value : vector) { 
+    fmt::print("{} ", value);
+    fmt::print("\n");
+}
+}
+
+
 auto main(int argc, char **argv) -> int
 {
     int count = 20;
@@ -41,11 +50,9 @@ auto main(int argc, char **argv) -> int
     for (int i = 0; i < count; ++i) {
     randomValues.push_back(dis(gen));
     }
+    print_vector(randomValues);
 
-    for (int value : randomValues) {
-    fmt::print("{} ", value);
-    fmt::print("\n");
-}
+
 
     return 0; /* exit gracefully*/
 
