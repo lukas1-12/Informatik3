@@ -42,6 +42,10 @@ auto main(int argc, char **argv) -> int
     randomValues.push_back(dis(gen));
     }
 
+    for (int value : randomValues) {
+    fmt::print("{} ", value);
+    fmt::print("\n");
+}
 
     return 0; /* exit gracefully*/
 
