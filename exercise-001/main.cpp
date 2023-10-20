@@ -4,6 +4,9 @@
 #include "CLI/CLI.hpp"
 #include "config.h"
 
+#include <vector>
+#include <random>
+
 auto main(int argc, char **argv) -> int
 {
     int count = 20;
@@ -31,6 +34,15 @@ auto main(int argc, char **argv) -> int
      */
     fmt::print("Hello, {}!\n", app.get_name());
 
+    std::vector<int> randomValues;
+    std::random_device rd;
+    std::mt19937 gen(rd());
+    std::uniform_int_distribution<int> dis(1, 100);
+    for (int i = 0; i < count; ++i) {
+    randomValues.push_back(dis(gen));
+    }
+
 
     return 0; /* exit gracefully*/
+
 }
