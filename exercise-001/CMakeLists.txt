@@ -1,5 +1,11 @@
 cmake_minimum_required (VERSION 3.10.2)
 
+# Include dependencies
+find_package(fmt REQUIRED)
+find_package(nlohmann_json REQUIRED)
+find_package(CLI11 CONFIG REQUIRED)
+find_package(Catch2 3 REQUIRED)
+
 # Set the project name to your project name, template isn't very descriptive
 project (exercise-001 VERSION 0.0.2 LANGUAGES CXX)
 string(TIMESTAMP BUILD_DATE "%Y-%m-%dT%H:%M:%S")

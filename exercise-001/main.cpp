@@ -61,6 +61,7 @@ auto main(int argc, char **argv) -> int
     fmt::print("Sorted Numbers:\n");
     print_vector(randomValues);
     fmt::print("time for the sort: {}", elapsed);
+    
 
     return 0; /* exit gracefully*/
 
