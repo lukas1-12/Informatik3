@@ -1,7 +1,7 @@
 cmake_minimum_required (VERSION 3.10.2)
 
 # Set the project name to your project name, template isn't very descriptive
-project (catch2_example VERSION 0.0.1 LANGUAGES CXX)
+project (exercise-002 VERSION 0.0.2 LANGUAGES CXX)
 string(TIMESTAMP BUILD_DATE "%Y-%m-%dT%H:%M:%S")
 
 # specify the C++ standard
@@ -24,10 +24,4 @@ add_executable(${PROJECT_NAME} main.cpp)
 # Add libraries
 target_link_libraries(${PROJECT_NAME} PRIVATE
                                         fmt::fmt
-                                        CLI11::CLI11
-                                        nlohmann_json::nlohmann_json)
-
-# Add the tests
-if(BUILD_TESTS)
-  add_subdirectory(tests)
-endif(BUILD_TESTS)
+                                        CLI11::CLI11)
