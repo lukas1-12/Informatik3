@@ -14,7 +14,7 @@ public:
 
 private:
     int m_size;
-    int capacity = 100;
+    int capacity;
     int* mp_Data;
 };
 
