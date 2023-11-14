@@ -1,6 +1,5 @@
 #include <fmt/chrono.h>
 #include <fmt/format.h>
-
 #include "vectorint.hpp"
 
 auto main(int argc, char **argv) -> int
